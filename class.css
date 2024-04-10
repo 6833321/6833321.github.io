@@ -1,0 +1,88 @@
+.search{
+    border: none;
+    height: 58px;
+    width: 92px;
+    position: absolute;
+    top: 1.5px;
+    left: 516.125px;
+    background-color: #ffffff00;
+}
+.input{
+    top:0;
+    width: 1020px;
+    height: 51px;
+    background-color: #ffffff;
+}
+
+div {
+    position: relative;
+    display: inline-block;
+    padding: 3px;
+  }
+   
+  input {
+    outline: none;
+    border: none;
+    background: #ffffff;
+    padding: 1px;
+  }
+  .bottom,
+.top,
+.left,
+.right {
+  position: absolute;
+  background-color: #ff0000;
+  transition: transform 0.1s ease-in-out;
+}
+.bottom,
+.top {
+  left: 0;
+  right: 0;
+  height: 2px;
+  transform: scaleX(0);
+}
+ 
+.left,.right {
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: scaleY(0);
+}
+.bottom {
+  bottom: 0;
+  transform-origin: right center;
+}
+input:focus ~ .bottom {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+ 
+.top {
+  top: 0;
+  transform-origin: left center;
+  transition-delay: 0.2s;
+}
+input:focus ~ .top {
+  transform: scaleX(1);
+  transform-origin: right center;
+}
+ 
+.right {
+  transform-origin: top center;
+  right: -1px;
+  transition-delay: 0.1s;
+}
+input:focus ~ .right {
+  transform: scaleY(1);
+  transform-origin: bottom center;
+}
+ 
+.left {
+  left: 0;
+  transform-origin: bottom center;
+  transition-delay: 0.3s;
+}
+input:focus ~ .left {
+  transform: scaleY(1);
+  transform-origin: top center;
+}
