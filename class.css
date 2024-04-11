@@ -1,9 +1,10 @@
 .search{
     border: none;
-    height: 58px;
+    height: 59px;
     width: 92px;
     position: absolute;
-    top: 1.5px;
+    top: 3px;
+    left: 1032px;
     background-color: #ffffff00;
 }
 .input{
