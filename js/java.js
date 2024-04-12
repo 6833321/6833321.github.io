@@ -6,7 +6,7 @@ function addParamToUrl(url, param, value) {
 
 function navigateToUrl() {
     var baseUrl = '';
-    var param = 'param';
+    var param = 'search';
     var a=document.getElementById("value");
     var value = a.value;
     var newUrl = addParamToUrl(baseUrl, param, value);
