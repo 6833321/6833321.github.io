@@ -1,0 +1,87 @@
+ 
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+ 
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Document</title>
+
+</head>
+
+ 
+
+<body>
+
+<div id="videoBtn" style="max-width:500px;">
+
+<video controls="false" muted="muted" id="video1" name="media" style="width:5000px; height: 2400px;">
+
+<source src="http://6833321.github.io/writer/class
+/无标题.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+<script>
+
+var myVideo = document.getElementById("video1");
+
+var videoBtn = document.getElementById("videoBtn");
+
+myVideo.loop = true
+
+videoBtn.onmouseleave = function () {
+
+myVideo.pause();
+
+}
+
+videoBtn.onmousemove = function () {
+
+myVideo.play();
+
+}
+
+function getVideoTime() {
+
+if (document.getElementById('video1')) {
+
+let videoPlayer = document.getElementById('video1');
+
+videoPlayer.addEventListener('timeupdate', function () {
+
+
+if (videoPlayer.currentTime > 11) {
+
+myVideo.pause();
+
+videoPlayer.currentTime = 0
+
+}
+
+}, false)
+
+}
+
+}
+
+getVideoTime();
+
+</script>
+
+</body>
+
+ 
+
+</html>
