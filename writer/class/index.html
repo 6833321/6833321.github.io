@@ -1,87 +1,91 @@
- 
-
 <!DOCTYPE html>
-
-<html lang="en">
-
- 
+<html lang="cn">
 
 <head>
-
-<meta charset="UTF-8">
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>作者的班级</title>
-
+    <title>作者的班级</title>
 </head>
 
- 
-
 <body>
-<p1>吉祥物</p1>
-<div id="videoBtn" style="max-width:500px;">
+    <!-- <table style="border: 1px">
+        <tr>
+            <td style="border: 1px solid black;">
+                学号
+            </td>
+            <td style="border: 1px solid black;">
+                1
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                2
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                3
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                4
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                5
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                6
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                7
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                8
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                9
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                10
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                11
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                12
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                13
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                14
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                15
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                16
+            </td style="border: 1px solid black;">
+        </tr>
 
-<video controls="false" muted="muted" id="video1" name="media" style="width:500px; height: 240px;">
 
-<source src="https://6833321.github.io/writer/class
-/无标题.mp4" type="video/mp4">
+        <tr>
+            <td style="border: 1px solid black;">
+            人名
+            </td style="border: 1px solid black;">
+            <td style="border: 1px solid black;">
+                常梓恒
+            </td style="border: 1px solid black;">
+        </tr>
+    </table> -->
+    <div>
+        <h1>乌龟</h1>
+        <img src="https://6833321.github.io/writer/class/turtle.jpg" width="100%">
+    </div>
+    <div>
+        <h1>乌龟plus 作者：宋俊熙，邢梓晨</h1>
+        <img src="https://6833321.github.io/writer/class/turtle plus.jpg" width="100%">
+    </div>
 
-</video>
-
-</div>
-
-<script>
-
-var myVideo = document.getElementById("video1");
-
-var videoBtn = document.getElementById("videoBtn");
-
-myVideo.loop = true
-
-videoBtn.onmouseleave = function () {
-
-myVideo.pause();
-
-}
-
-videoBtn.onmousemove = function () {
-
-myVideo.play();
-
-}
-
-function getVideoTime() {
-
-if (document.getElementById('video1')) {
-
-let videoPlayer = document.getElementById('video1');
-
-videoPlayer.addEventListener('timeupdate', function () {
-
-
-if (videoPlayer.currentTime > 11) {
-
-myVideo.pause();
-
-videoPlayer.currentTime = 0
-
-}
-
-}, false)
-
-}
-
-}
-
-getVideoTime();
-
-</script>
-
+    <h1>吉祥物</h1>
+    <div id="videoBtn" style="max-width:500px;">
+        <video controls="false" muted="muted" id="video1" name="media" style="width:500px; height: 30   0px;">
+            <source src="https://6833321.github.io/writer/class/无标题.mp4" type="video/mp4">
+        </video>
+    </div>
 </body>
-
- 
 
 </html>
