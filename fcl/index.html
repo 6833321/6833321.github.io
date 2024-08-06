@@ -1,8 +1,68 @@
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="https://fcl-team.github.io/css/mdui.min.css" />
+    <link rel="stylesheet" href="https://fcl-team.github.io/css/style.css" />
+    <title>Fold Craft Launcher</title>
+    <link rel="shortcut icon" href="https://fcl-team.github.io/img/head/img_app.png">
+    <!--SEO Optimize-->
+    <meta name="keywords" content="FCL" />
+    <meta name="description" content="Fold Craft Launcher" />
+    <meta name="author" content="FCL-Team" />
 </head>
-<body>
-    <h1>
-        <a href="https://mirror.ghproxy.com/https://raw.githubusercontent.com/FCL-Team/FoldCraftLauncher/main/version_map.json" title="fcl">打开我！！！</a>
-    </h1>
+
+<!--Theme-->
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-light-green">
+    <!--banner-->
+    <div class="mdui-container" id="version_list"></div>
+
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script>
+    function init(){
+        $.ajax({
+            type:"get",
+            url:"https://mirror.ghproxy.com/raw.githubusercontent.com/FCL-Team/FoldCraftLauncher/main/version_map.json",
+            dataType:"html",
+            success:function(res) {
+              var jsonStr = res;
+              var jsonObj = JSON.parse(jsonStr);
+              var html_text = "";
+              for(let i = 0; i < jsonObj.length; i++) {
+                var obj = jsonObj[i];
+              var t1=obj.url;
+              var t=t1.substring(7,t1.length-1);
+                html_text +=
+                    "<div " + 
+                    "class=\"card mdui-ripple mdui-card-media-covered-gradient\" " +
+                    "<a " + "href=\"https://mirror.ghproxy.com" +
+                    t +
+                    "\"" +
+                    ">" +
+                    "<h2>" +
+                    "Fold Craft Launcher" +
+                    "</h2>" +
+                    "<h3>" +
+                    obj.versionName +
+                    "</h3>" +
+                    "<p>"+
+                    obj.description[1].text +
+                    "</p>"+
+                    "</a>" +
+                    "</div>";
+              }
+              $("#version_list").html(html_text);
+            }
+        })
+    }
+    $(function() {
+      init();
+    })
+    </script>
+
 </body>
