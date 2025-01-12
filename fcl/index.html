@@ -38,6 +38,7 @@
                 var obj = jsonObj[i];
               var t1=obj.url;
               var t=t1.substring(7,t1.length);
+              obj.description[1].text=obj.description[1].text.replace("\n", "</p><p>");
                 html_text +=
                     "<div " + 
                     "class=\"card mdui-ripple mdui-card-media-covered-gradient\" >" +
@@ -51,8 +52,7 @@
                     "<h3>" +
                     obj.versionName +
                     "</h3>" +
-                    "<p>"+
-                    obj.description[1].text +
+                    "<p>"+obj.description[1].text+
                     "</p>"+
                     "</a>" +
                     "</div>";
