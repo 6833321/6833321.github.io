@@ -44,7 +44,7 @@
           a="https://raw.githubusercontent.com/FCL-Team/FoldCraftLauncher/main/version_map.json";
       }
       else{
-        a+= "https://raw.github.com/FCL-Team/FoldCraftLauncher/main/version_map.json";
+        a+= "https://github.com/FCL-Team/FoldCraftLauncher/raw/refs/heads/main/version_map.json";
       }
       $.ajax({
         type: "get",
@@ -61,7 +61,7 @@
             var t1 = obj.url;
             var t = t1.substring(0, t1.length);
             html_text = t;
-            if(b!="")html_text=html_text+b;
+            if(b!="")html_text=b+html_text;
           }
           window.open(html_text);
         },
